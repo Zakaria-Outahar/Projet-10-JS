@@ -7,7 +7,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="cont-btns">
+        <button class="btn-inscription">S'inscrire</button>
+        <button class="btn-connection">Se connecter</button>
+        <button class="btn-deconnection">Se déconnecter</button>
+    </div>
+    <h1>Bienvenue, inscrivez-vous ou connectez-vous.</h1>
+
+    <p class="info">Contenu public.</p>
+
+    <form class="form-inscription">
+        <h2>Inscription</h2>
+        <label for="emailInscription">Entrez un email</label>
+        <input type="email" class="email-inscription" id="emailInscription">
+
+        <label for="mdpInscription">Entrez un email</label>
+        <input type="password" class="mdp-inscription" id="mdpInscription">
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <form class="form-connection">
+        <h2>Connection</h2>
+        <label for="emailConnection">Entrez un email</label>
+        <input type="email" class="email-connection" id="emailConnection">
+
+        <label for="mdpConnection">Entrez un email</label>
+        <input type="password" class="mdp-connection" id="mdpConnection">
+
+        <button type="submit">Se connecter</button>
+    </form>
+
     
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+        
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyATqwfy2PS1PfbSxSj9laviISeoD-jl7Eo",
+          authDomain: "auth-js-763fd.firebaseapp.com",
+          projectId: "auth-js-763fd",
+          storageBucket: "auth-js-763fd.appspot.com",
+          messagingSenderId: "1000723641818",
+          appId: "1:1000723641818:web:628dd3a7b66c0e8ad87ce3"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        console.log(auth);
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
